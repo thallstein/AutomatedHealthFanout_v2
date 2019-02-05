@@ -109,9 +109,10 @@ def update_public_tables_v2(_source_table ,_source_view, _target_table):
                         fanout_record['AUROC'] = auroc
                 at_target_table.insert(fanout_record, typecast=True)
 
-#clear_table('shared_autodx')
-#update_public_tables_v2('Content','python_shared_autodx','shared_autodx')
+#Update Publicly Shared Table
+clear_table('shared_autodx')
+update_public_tables_v2('Content','python_shared_autodx','shared_autodx')
 
 # For Testing #
-clear_table('test_shared_autodx')
-update_public_tables_v2('Content','python_shared_autodx','test_shared_autodx')
+#clear_table('test_shared_autodx')
+#update_public_tables_v2('Content','python_shared_autodx','test_shared_autodx')
